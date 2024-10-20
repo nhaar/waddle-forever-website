@@ -33,33 +33,3 @@ export const POST = createJsonPost(async (body) => {
     return ErrorResponse.create(400, 'Incorrect body');
   }
 })
-
-// export async function POST(request: Request) {
-//   let body
-//   try {
-//     body = await request.json()
-//   } catch (error) {
-//     return Response.json({ 'error': 'Body must be JSON' }, { status: 400 })
-//   }
-//   const parse = OSInformation.safeParse(body)
-//   if (parse.success) {
-//     const { platform, arch } = parse.data
-
-//     const version = CURRENT_VERSION.version;
-
-//     if (platform === 'win32') {
-//       if (arch === 'x64') {
-//         return Response.json({
-//           'exists': true,
-//           'filename': `client-${version}-win.zip`,
-//           'name': 'client'
-//         })
-//       }
-//     }
-//     return Response.json({
-//       'exists': false
-//     })
-//   } else {
-//     return Response.json({ 'error': 'Incorrect body' }, { status: 400 });
-//   }
-// }
