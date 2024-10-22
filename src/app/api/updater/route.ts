@@ -1,4 +1,3 @@
-import { CURRENT_VERSION } from '@/app/api/version/route'
 import { OSInformation } from "@/app/api/client/route"
 import { createJsonPost } from "@/lib/api"
 import { ErrorResponse } from "@/lib/res"
