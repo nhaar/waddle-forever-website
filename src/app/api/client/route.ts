@@ -1,12 +1,6 @@
-import { z } from "zod"
 import { CURRENT_VERSION } from '@/app/api/version/route'
-import { createJsonPost } from "@/lib/api"
+import { createJsonPost, OSInformation } from "@/lib/api"
 import { ErrorResponse } from "@/lib/res"
-
-export const OSInformation = z.object({
-  platform: z.string(),
-  arch: z.string()
-})
 
 export const dynamic = 'force-dynamic'
 

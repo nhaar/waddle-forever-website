@@ -1,3 +1,4 @@
+import { z } from "zod"
 import { ErrorResponse } from "./res"
 
 export function createJsonPost(callback: (body: any) => Promise<Response>) {
@@ -12,3 +13,8 @@ export function createJsonPost(callback: (body: any) => Promise<Response>) {
     return await callback(body)
   }
 }
+
+export const OSInformation = z.object({
+  platform: z.string(),
+  arch: z.string()
+})

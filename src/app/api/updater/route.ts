@@ -1,5 +1,4 @@
-import { OSInformation } from "@/app/api/client/route"
-import { createJsonPost } from "@/lib/api"
+import { createJsonPost, OSInformation } from "@/lib/api"
 import { ErrorResponse } from "@/lib/res"
 
 export const dynamic = 'force-dynamic'
