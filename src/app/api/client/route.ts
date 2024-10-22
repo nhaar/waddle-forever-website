@@ -1,4 +1,4 @@
-import { CURRENT_VERSION } from '@/app/api/version/route'
+import { CURRENT_VERSION } from '@/lib/version'
 import { createJsonPost, OSInformation } from "@/lib/api"
 import { ErrorResponse } from "@/lib/res"
 

@@ -1,5 +1,5 @@
 import { z } from "zod"
-import { CURRENT_VERSION } from '@/app/api/version/route'
+import { CURRENT_VERSION } from '@/lib/version'
 import { createJsonPost } from '@/lib/api'
 
 const Settings = z.object({
