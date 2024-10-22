@@ -77,7 +77,7 @@ export const POST = createJsonPost(async (body) => {
 
     try {
       versionLabel = new VersionLabel(version)
-    } catch (error) {
+    } catch {
       return ErrorResponse.create(400, 'Incorrect version')
     }
 

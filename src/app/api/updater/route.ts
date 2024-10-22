@@ -10,8 +10,6 @@ export const POST = createJsonPost(async (body) => {
   if (parse.success) {
     const { platform, arch } = parse.data
 
-    const version = CURRENT_VERSION.version;
-
     if (platform === 'win32') {
       if (arch === 'x64') {
         return Response.json({

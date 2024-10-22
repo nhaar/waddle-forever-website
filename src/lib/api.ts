@@ -5,7 +5,7 @@ export function createJsonPost(callback: (body: any) => Promise<Response>) {
     let body
     try {
       body = await request.json()
-    } catch (error) {
+    } catch {
       return ErrorResponse.create(400, 'Body must be JSON')
     }
 
