@@ -16,7 +16,8 @@ export const POST = createJsonPost(async (body) => {
         return Response.json({
           'exists': true,
           'filename': `client-${version}-win.zip`,
-          'name': 'client'
+          'name': 'client',
+          'type': 'client'
         })
       }
     }

@@ -13,7 +13,8 @@ export const POST = createJsonPost(async (body) => {
         return Response.json({
           'exists': true,
           'filename': `updater-win.exe`,
-          'name': 'updater'
+          'name': 'updater',
+          'type': 'updater'
         })
       }
     }
