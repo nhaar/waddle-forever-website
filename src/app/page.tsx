@@ -31,6 +31,9 @@ export default function Home() {
             MacOS - Not currently supported
           </div>
         </div>
+        <Link className="underline" href='https://discord.gg/URHXm3cFv5'>
+          JOIN OUR DISCORD!
+        </Link>
       </main>
       <footer>
       </footer>
