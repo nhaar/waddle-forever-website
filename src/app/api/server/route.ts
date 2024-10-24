@@ -20,6 +20,15 @@ export const POST = createJsonPost(async (body) => {
           'type': 'server'
         })
       }
+    } else if (platform === 'linux') {
+      if (arch === 'x64') {
+        return Response.json({
+          'exists': true,
+          'filename': `server-${version}-linux.zip`,
+          'name': 'server',
+          'type': 'server'
+        })
+      }
     }
     return Response.json({
       'exists': false
