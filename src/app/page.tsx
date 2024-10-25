@@ -16,16 +16,14 @@ export default function Home() {
         <div>
           <div className="mb-2"> Download links for 0.2.0 (BETA) </div>
           <div className="border border-black rounded bg-[#0280d9] p-1 flex gap-x-8">
-            <div>
+            <Link className="underline bold" href='https://github.com/nhaar/waddle-forever-installer/releases/latest/download/waddle-forever-installer-win.exe'>
               Windows Download
-            </div>
-            <div className="gap-x-8 flex">
-              <Link className="underline bold" href='/waddle-forever-installer-win.exe'>EXE</Link>
-              <Link className="underline bold" href='/waddle-forever-installer-win.zip'>ZIP</Link>
-            </div>
+            </Link>
           </div>
           <div className="border border-black rounded bg-[#0280d9] p-1">
-            Linux - SOON!
+            <Link className="underline bold" href='https://github.com/nhaar/waddle-forever-installer/releases/latest/download/waddle-forever-installer-linux'>
+              Linux Download
+            </Link>
           </div>
           <div className="border border-black rounded bg-[#0280d9] p-1">
             MacOS - Not currently supported
