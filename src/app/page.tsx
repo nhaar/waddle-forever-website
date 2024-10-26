@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Waddle Forever',
-  description: 'The website for Waddle Forever, the singleplayer Club Penguin'
+  description: 'NOT AFFILIATED WITH DISNEY. The website for Waddle Forever, a fanmade singleplayer Club Penguin'
 };
 
 export default function Home() {
@@ -12,6 +12,9 @@ export default function Home() {
       <main className="flex flex-col gap-y-2 text-center select-none">
         <div className="text-xl font-bold">
           Waddle Forever
+        </div>
+        <div>
+          <strong>DISCLAIMER</strong>: This project is <strong>NOT</strong> affiliated with Disney!<br />It is fully <strong>FAN-BASED</strong> and will always be <strong>NO PROFIT</strong><br />and ran by the passion of the fans!
         </div>
         <div>
           <div className="mb-2"> Download links for 0.2.0 (BETA) </div>
