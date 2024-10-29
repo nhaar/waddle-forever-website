@@ -16,7 +16,11 @@ export const POST = createJsonPost(async (body) => {
     const version = CURRENT_VERSION.version
     const files = [
       { filename: `static-${version}.zip`, name: 'static', type: 'media' },
-      { filename: `special-${version}.zip`, name: 'special', type: 'media' }
+      { filename: `special-${version}.zip`, name: 'special', type: 'media' },
+      { filename: `furniture-${version}.zip`, name: 'furniture', type: 'media' },
+      { filename: `music-${version}.zip`, name: 'music', type: 'media' },
+      { filename: `newspapers-${version}.zip`, name: 'newspapers', type: 'media' },
+      { filename: `versions-${version}.zip`, name: 'versions', type: 'media' }
     ]
 
     if (parse.data.clothing === true) {

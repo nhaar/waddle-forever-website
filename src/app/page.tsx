@@ -24,7 +24,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="border border-black rounded bg-[#0280d9] p-1">
-            <Link className="underline bold" href='https://github.com/nhaar/waddle-forever-installer/releases/latest/download/waddle-forever-installer-linux'>
+            <Link className="underline bold" href='/linux'>
               Linux Download
             </Link>
           </div>
