@@ -15,7 +15,7 @@ export const POST = createJsonPost(async (body) => {
       if (arch === 'x64') {
         return Response.json({
           'exists': true,
-          'filename': `server-${version}-win.zip`,
+          'filename': `server-${version}-win.exe`,
           'name': 'server',
           'type': 'server'
         })
