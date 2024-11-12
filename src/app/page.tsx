@@ -1,3 +1,4 @@
+import { CURRENT_VERSION } from "@/lib/version";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ export default function Home() {
           <strong>DISCLAIMER</strong>: This project is <strong>NOT</strong> affiliated with Disney!<br />It is fully <strong>FAN-BASED</strong> and will always be <strong>NO PROFIT</strong><br />and ran by the passion of the fans!
         </div>
         <div>
-          <div className="mb-2"> Download links for 0.2.1 (BETA) </div>
+          <div className="mb-2"> Download links for {CURRENT_VERSION.version} (BETA) </div>
           <div className="border border-black rounded bg-[#0280d9] p-1">
             <Link className="underline bold" href='https://github.com/nhaar/waddle-forever-installer/releases/latest/download/waddle-forever-installer-win.exe'>
               Windows Download
