@@ -107,5 +107,8 @@ export async function GET(
     })
   });
 
-  return new Response(fileBuffer, { headers: { 'content-type': 'application/zip'} });
+  return new Response(fileBuffer, { headers: {
+    'content-type': 'application/zip',
+    'content-length': String(fileBuffer.byteLength)
+  } });
 }
