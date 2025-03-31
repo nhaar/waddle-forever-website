@@ -97,8 +97,14 @@ export async function GET(
   const version = mediaMatch[2];
 
   const fileName = (new MediaFileName(mediaName, version)).fileName;
+  const filePath = path.join(process.cwd(), 'public', fileName);
+
+  if (!fs.existsSync(filePath)) {
+    return notFound();
+  }
+
   const fileBuffer = await new Promise<Buffer>((resolve, reject) => {
-    fs.readFile(path.join(process.cwd(), 'public', fileName), (err, data) => {
+    fs.readFile(filePath, (err, data) => {
       if (err !== null) {
         reject(err);
       } else {
