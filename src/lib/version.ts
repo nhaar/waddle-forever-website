@@ -44,6 +44,10 @@ export class VersionLabel {
     return !(this.isAfterOrEqual(other))
   }
 
+  isBeforeOrEqual (other: VersionLabel) {
+    return !(this.isAfter(other));
+  }
+
   isAfterOrEqual (other: VersionLabel) {
     return this.isAfter(other) || this.isEqual(other)
   }
