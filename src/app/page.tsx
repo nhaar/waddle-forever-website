@@ -20,7 +20,7 @@ export default function Home() {
         <div>
           <div className="mb-2"> Download links for {CURRENT_VERSION.version} (BETA) </div>
           <div className="border border-black rounded bg-[#0280d9] p-1">
-            <Link className="underline bold" href='https://github.com/nhaar/Waddle-Forever/releases/download/v0.3.0/WaddleForever-Setup-0.3.0.exe'>
+            <Link className="underline bold" href={`https://github.com/nhaar/Waddle-Forever/releases/download/v${CURRENT_VERSION.version}/WaddleForever-Setup-${CURRENT_VERSION.version}.exe`}>
               Windows Download
             </Link>
           </div>
