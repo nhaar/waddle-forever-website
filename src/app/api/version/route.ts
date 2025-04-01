@@ -11,8 +11,6 @@ type VersionObject = z.infer<typeof VersionObject>
 
 export const dynamic = 'force-dynamic'
 
-const LAST_SUPPORTED_AUTO_VERSION = new VersionLabel('0.2.1');
-
 export const POST = createJsonPost(async (body) => {
   const parse = VersionObject.safeParse(body)
   if (parse.success) {
@@ -25,11 +23,11 @@ export const POST = createJsonPost(async (body) => {
       return ErrorResponse.create(400, 'Incorrect version')
     }
 
-    if (versionLabel.isBefore(LAST_SUPPORTED_AUTO_VERSION)) {
-      return Response.json({ 'status': 'unsupported' })
-    } else if (versionLabel.isEqual(CURRENT_VERSION)) {
+    if (versionLabel.isEqual(CURRENT_VERSION)) {
       return Response.json({ 'status': 'current' })
     } else {
+      // you used to be able to send 'old' here, but it is deprecated
+      // for old version support, will keep "unsupported" keyword
       return Response.json({ 'status': 'unsupported' })
     }
   } else {
