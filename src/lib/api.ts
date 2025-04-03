@@ -18,3 +18,9 @@ export const OSInformation = z.object({
   platform: z.string(),
   arch: z.string()
 })
+
+/** Check if a string can be used as a media's name */
+export function isValidMediaName(name: string): boolean {
+  const match = name.match(/^\w+$/);
+  return match !== null;
+}
