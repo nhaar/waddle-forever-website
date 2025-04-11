@@ -15,7 +15,7 @@ export default function Home() {
           Waddle Forever
         </div>
         <div>
-          <strong>DISCLAIMER</strong>: This project is <strong>NOT</strong> affiliated with Disney!<br />It is fully <strong>FAN-BASED</strong> and will always be <strong>NO PROFIT</strong><br />and ran by the passion of the fans!
+          <strong>DISCLAIMER</strong>: This project is <strong>NOT</strong> affiliated with Disney!<br />It is fully <strong>FAN-BASED</strong> and will always be <strong>NON PROFIT</strong><br />and run by the passion of the fans!
         </div>
         <div>
           <div className="mb-2"> Download links for {CURRENT_VERSION.version} (BETA) </div>
