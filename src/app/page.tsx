@@ -15,9 +15,15 @@ export default function Home() {
           Waddle Forever
         </div>
         <div>
+          Waddle Forever is a Club Penguin you can install in your computer
+          <br/> and use to play locally (singleplayer) and explore different parties,<br/>
+          minigames, as well as versions ranging from 2005 to 2017
+        </div>
+        <div>
           <strong>DISCLAIMER</strong>: This project is <strong>NOT</strong> affiliated with Disney!<br />It is fully <strong>FAN-BASED</strong> and will always be <strong>NON PROFIT</strong><br />and run by the passion of the fans!
         </div>
         <div>
+          <div className="mb-2">Waddle Forever is still in development, so please beware of bugs!<br/> You can talk with us on the Discord server below.</div>
           <div className="mb-2"> Download links for {CURRENT_VERSION.version} (BETA) </div>
           <div className="border border-black rounded bg-[#0280d9] p-1">
             <Link className="underline bold" href={`https://github.com/nhaar/Waddle-Forever/releases/download/v${CURRENT_VERSION.version}/WaddleForever-Setup-${CURRENT_VERSION.version}.exe`}>
@@ -35,6 +41,9 @@ export default function Home() {
         </div>
         <Link className="underline" href='https://discord.gg/URHXm3cFv5'>
           JOIN OUR DISCORD!
+        </Link>
+        <Link className="underline" href='https://github.com/nhaar/Waddle-Forever'>
+          Github Repository
         </Link>
       </main>
       <footer>
