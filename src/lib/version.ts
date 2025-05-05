@@ -57,4 +57,4 @@ export class VersionLabel {
   }
 }
 
-export const CURRENT_VERSION = new VersionLabel('1.1.1');
+export const CURRENT_VERSION = new VersionLabel('1.1.2');
