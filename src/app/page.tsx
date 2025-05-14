@@ -52,7 +52,7 @@ export default function Home() {
           How to make an account? - Just log in with any name, any password!
         </div>
         <div>
-          Why are some servers full? - It's just decoration! The game is offline
+          Why are some servers full? - It&apos;s just decoration! The game is offline
         </div>
       </main>
       <footer>
