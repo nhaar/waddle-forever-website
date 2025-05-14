@@ -45,6 +45,15 @@ export default function Home() {
         <Link className="underline" href='https://github.com/nhaar/Waddle-Forever'>
           Github Repository
         </Link>
+        <div className="text-xl font-bold">
+          FAQ
+        </div>
+        <div>
+          How to make an account? - Just log in with any name, any password!
+        </div>
+        <div>
+          Why are some servers full? - It's just decoration! The game is offline
+        </div>
       </main>
       <footer>
       </footer>
