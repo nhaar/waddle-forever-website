@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      <main className="flex flex-col gap-y-2 text-center select-none">
-        <div className="text-xl font-bold">
-          Waddle Forever
-        </div>
+      <main className="flex flex-col gap-y-2 select-none">
         <div>
           Waddle Forever is a Club Penguin you can install in your computer
           <br/> and use to play locally (singleplayer) and explore different parties,<br/>
