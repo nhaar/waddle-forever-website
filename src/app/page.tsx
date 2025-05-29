@@ -33,7 +33,9 @@ export default function Home() {
             </Link>
           </div>
           <div className="border border-black rounded bg-[#0280d9] p-1 max-w-xs">
-            MacOS - Not currently supported
+            <Link className="underline bold" href={`https://github.com/nhaar/Waddle-Forever/releases/download/v${CURRENT_VERSION.version}/WaddleForever-${CURRENT_VERSION.version}.dmg`}>
+              MacOS Download
+            </Link>
           </div>
         </div>
       </main>
