@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: 'Waddle Forever',
@@ -14,9 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col bg-[#325597] text-white">
         <Navbar />
-        <main className="bg-[#325597] text-white flex justify-center h-screen">{children}</main>
+        <main className="flex-1 flex justify-center">{children}</main>
+        <Footer />
       </body>
     </html>
   );
