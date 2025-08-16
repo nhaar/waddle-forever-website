@@ -1,11 +1,5 @@
 import { CURRENT_VERSION } from "@/lib/version";
-import { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: 'Waddle Forever',
-  description: 'NOT AFFILIATED WITH DISNEY. The website for Waddle Forever, a fanmade singleplayer Club Penguin'
-};
 
 export default function Home() {
   return (

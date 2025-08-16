@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: 'Waddle Forever',
-  description: 'NOT AFFILIATED WITH DISNEY. The website for Waddle Forever, a fanmade singleplayer Club Penguin',
+  description: 'Play all eras of Club Penguin, hosted locally on your computer.',
 };
 
 export default function RootLayout({
