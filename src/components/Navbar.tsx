@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-blue-600 text-white p-3">
-      <nav className="max-w-4xl mx-auto">
+      <nav className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between">
           <Link href="/">
             <span className="text-5xl font-bold hover:text-blue-200">
