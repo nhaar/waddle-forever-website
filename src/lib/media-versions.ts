@@ -16,7 +16,7 @@ type MediaAndVersions = Record<string, MediaUpdateVersions>;
  * Must not include versions earlier than the "last non clever version"
  * */
 const MEDIA_INFO: MediaAndVersions = {
-  'clothing': ['0.2.3', '1.0.0', '1.1.0']
+  'clothing': ['0.2.3', '1.0.0', '1.1.0', '1.2.0']
 };
 
 /** Last version in which this system was not supported */
