@@ -75,7 +75,7 @@ async function readVersionCache(): Promise<string> {
       if (err !== null) {
         reject(err);
       } else {
-        resolve(data);
+        resolve(data.trim());
       }
     })
   });
