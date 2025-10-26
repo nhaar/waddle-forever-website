@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 export class VersionLabel {
   major: number
   minor: number
@@ -57,4 +59,38 @@ export class VersionLabel {
   }
 }
 
-export const CURRENT_VERSION = new VersionLabel('1.2.1');
+const VERSION_FILE = 'version-cache';
+
+function saveVersionCache(version: string): void {
+  fs.writeFile(VERSION_FILE, version, (err) => {
+    if (err !== null) {
+      throw err;
+    }
+  });
+}
+
+async function readVersionCache(): Promise<string> {
+  return new Promise<string>((resolve, reject) => {
+    fs.readFile(VERSION_FILE, { encoding: 'utf-8' }, (err, data) => {
+      if (err !== null) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    })
+  });
+}
+
+export async function getCurrentVersion() {
+  const res = await fetch('https://api.github.com/repos/nhaar/Waddle-Forever/releases/latest');
+  if (res.status === 200) {
+    const json = await res.json();
+    const tag = json['tag_name'] as string;
+    const version = tag.slice(1);
+    saveVersionCache(version);
+    return new VersionLabel(version);
+  } else {
+    const version = await readVersionCache();
+    return new VersionLabel(version);
+  }
+}

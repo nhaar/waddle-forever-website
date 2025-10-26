@@ -1,6 +1,6 @@
 import { z } from "zod"
 import { createJsonPost } from "@/lib/api"
-import { VersionLabel, CURRENT_VERSION } from "@/lib/version"
+import { VersionLabel, getCurrentVersion } from "@/lib/version"
 import { ErrorResponse } from "@/lib/res"
 
 const VersionObject = z.object({
@@ -23,7 +23,7 @@ export const POST = createJsonPost(async (body) => {
       return ErrorResponse.create(400, 'Incorrect version')
     }
 
-    if (versionLabel.isEqual(CURRENT_VERSION)) {
+    if (versionLabel.isEqual((await getCurrentVersion()))) {
       return Response.json({ 'status': 'current' })
     } else {
       // you used to be able to send 'old' here, but it is deprecated

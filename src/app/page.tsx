@@ -1,8 +1,9 @@
-import { CURRENT_VERSION } from "@/lib/version";
+import { getCurrentVersion } from "@/lib/version";
 import Image from 'next/image';
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const CURRENT_VERSION = await getCurrentVersion();
   return (
     <div>
       <main className="max-w-6xl mx-auto p-6">
