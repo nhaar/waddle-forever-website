@@ -10,7 +10,7 @@ if (!fs.existsSync(VERSION_FILE)) {
   process.exit(1);
 } else {
   const version = fs.readFileSync(VERSION_FILE, { encoding: 'utf-8' });
-  if (version.trim().match(/"^\d+\.\d+\.\d+$/) === null) {
+  if (version.trim().match(/^\d+\.\d+\.\d+$/) === null) {
     console.error('✘ Version backup file is invalid');
     process.exit(1);
   }
