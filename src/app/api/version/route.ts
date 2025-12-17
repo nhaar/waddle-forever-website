@@ -23,12 +23,14 @@ export const POST = createJsonPost(async (body) => {
       return ErrorResponse.create(400, 'Incorrect version')
     }
 
-    if (versionLabel.isEqual((await getCurrentVersion()))) {
-      return Response.json({ 'status': 'current' })
+    const currentVersion = await getCurrentVersion();
+
+    if (versionLabel.isEqual(currentVersion)) {
+      return Response.json({ 'status': 'current', 'version': currentVersion.version })
     } else {
       // you used to be able to send 'old' here, but it is deprecated
       // for old version support, will keep "unsupported" keyword
-      return Response.json({ 'status': 'unsupported' })
+      return Response.json({ 'status': 'unsupported', 'version': currentVersion.version })
     }
   } else {
     return ErrorResponse.create(400, 'Incorrect body');
